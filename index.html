@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Persona Favorita 💜</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23DCD0FF%22>𖤓</text></svg>">
+</head>
+<body>
+
+    <div id="stars-container"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1><em>Para el amor de mi vida</em></h1>
+            <p>Un pequeño espacio web hecho con mucho amor solo para ti. 💜</p>
+            <p><em><strong>"Si tengo el don de profecía y entiendo todos los misterios; si poseo todo conocimiento, si tengo una fe que logra trasladar montañas, pero me falta el amor, no soy nada"</strong></em></p>
+            <p><em><strong>- 1 Corintios 13:2</strong></em></p>
+            <button id="magicBtn">Haz clic aquí ✨</button>
+        </div>
+    </header>
+
+    <section class="music-section">
+        <center>
+            <div class="highlight-box">
+                <h2>Nuestra Canción 💜</h2>
+                <p>Haz clic abajo para escucharla directamente en tu Spotify</p>
+            </div>
+        </center>
+        <div class="spotify-card">
+            <div class="card-info">
+                <span class="nota-musical">🎵</span>
+                <div>
+                    <h3>Veo en ti la luz</h3>
+                    <p>Enredados (Tangled)</p>
+                </div>
+            </div>
+            <a href="https://open.spotify.com/track/199LDzwbUTc2wEroyRxhBM?si=65f8876b0d6e4dd6" target="_blank" class="spotify-btn">
+                Abrir en Spotify 🚀
+            </a>
+        </div>
+    </section>
+
+    <section class="contador-section">
+        <h2>El tiempo vuela a tu lado...</h2>
+        <div id="countdown" class="countdown-container">
+            Cargando momentos especiales...
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Momentos que se quedan en el corazón ✨</h2>
+        <p class="gallery-subtitle">Pasa el cursor sobre las fotos para descubrir su historia</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="1.jpg" alt="Nuestro primer recuerdo juntos">
+                <div class="photo-overlay">
+                    <p>El día que todo comenzó 💜</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="2.jpeg" alt="Un día especial">
+                <div class="photo-overlay">
+                    <p>Cualquier lugar es perfecto si es contigo 💫</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="3.jpeg" alt="Nuestra risa favorita">
+                <div class="photo-overlay">
+                    <p>Amo cada una de tus sonrisas 👑</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="messages-section">
+        <h2>Déjame una nota secreta</h2>
+        <form action="guardar.php" method="POST" class="message-form">
+            <textarea name="mensaje" placeholder="Escribe algo lindo aquí..." required></textarea>
+            <button type="submit">Enviar al corazón 💌</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

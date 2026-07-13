@@ -1,0 +1,361 @@
+/* Variables de color para fácil manejo */
+:root {
+    --bg-dark: #0b0b0b;
+    --pastel-purple: #DCD0FF;
+    --deep-purple: #5b4699; /* Morado más vivo y brillante */
+    --neon-purple: #8A2BE2; /* Color extra para dar más contraste */
+    --white: #FFFFFF;
+    --text-muted: #A0A0A0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--white);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Sección Principal (Hero) con Efecto Fluido Líquido y Difuminado Estético */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    
+    /* El fondo ahora se queda en el z-index más bajo para no tapar nada */
+    z-index: 1; 
+    
+    background-color: var(--bg-dark);
+    
+    /* Degradados radiales con colores densos y hermosos */
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(91, 70, 153, 0.8) 0%, transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(220, 208, 255, 0.4) 0%, transparent 55%),
+        radial-gradient(circle at 50% 80%, rgba(138, 43, 226, 0.65) 0%, transparent 65%);
+    
+    background-size: 100% 100%;
+    
+    /* Animación fluida interactiva */
+    animation: fluidoLiquido 10s ease-in-out infinite alternate;
+
+    /* 🌟 MÁSCARA MÁGICA: Hace que el fondo morado se difumine suavemente hacia negro en la parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+}
+
+/* Contenedor interno del texto para que no se mueva con el fondo */
+.hero-content {
+    position: relative;
+    z-index: 10; /* Asegura que el texto y botón respondan a los clics */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--pastel-purple);
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(220, 208, 255, 0.6);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: var(--pastel-purple);
+    color: #121212;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Animación global de Fluido Orgánico con rango de movimiento dinámico */
+@keyframes fluidoLiquido {
+    0% {
+        background-position: 0% 0%, 100% 100%, 50% 50%;
+    }
+    50% {
+        background-position: 40% 60%, 60% 10%, 10% 90%;
+    }
+    100% {
+        background-position: 100% 100%, 0% 0%, 30% 60%;
+    }
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: var(--white);
+    box-shadow: 0 0 15px var(--pastel-purple);
+}
+
+/* Sección Contador y Mensajes */
+.contador-section, .messages-section {
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+}
+
+.contador-section h2, .messages-section h2 {
+    color: var(--pastel-purple);
+    margin-bottom: 40px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.time-box {
+    background: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--deep-purple);
+    min-width: 100px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Formulario */
+.message-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background-color: #121212;
+    border: 1px solid var(--deep-purple);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--pastel-purple);
+}
+
+/* Tarjeta de Spotify Personalizada */
+.spotify-card {
+    background: #1a1a1a;
+    border: 1px solid var(--deep-purple);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(220, 208, 255, 0.1);
+}
+
+.highlight-box {
+    display: inline-block;
+    text-align: center;
+    background: rgba(76, 64, 138, 0.15);
+    border: 1px solid rgba(220, 208, 255, 0.35);
+    border-radius: 18px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    max-width: 450px;
+}
+
+.highlight-box h2 {
+    margin-bottom: 12px;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.nota-musical {
+    font-size: 2rem;
+    background: var(--deep-purple);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.card-info h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.card-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.spotify-btn {
+    display: inline-block;
+    background-color: var(--pastel-purple);
+    color: #121212;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.spotify-btn:hover {
+    background-color: var(--white);
+    box-shadow: 0 0 15px var(--pastel-purple);
+    transform: translateY(-2px);
+}
+
+/* Sección de la Galería */
+.gallery-section {
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+}
+
+.gallery-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+}
+
+/* Contenedor Grid Responsivo */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Cada Tarjeta de Foto */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 4 / 5;
+    background-color: #121212;
+    border: 1px solid #2a2a2a;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: grayscale(20%);
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(11, 11, 11, 0.9) 0%, rgba(74, 59, 117, 0.2) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.photo-overlay p {
+    color: var(--pastel-purple);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--pastel-purple);
+    box-shadow: 0 10px 25px rgba(220, 208, 255, 0.15);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+
+.gallery-item:hover .photo-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .photo-overlay p {
+    transform: translateY(0);
+}
+
+/* Contenedor de las estrellas */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2; /* Al frente de los degradados pero detrás de las capas de contenido */
+}
+
+/* El elemento estrella */
+.star {
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 50%;
+    opacity: 0;
+    animation: parpadeo linear infinite;
+}
+
+/* Animación de parpadeo suave */
+@keyframes parpadeo {
+    0% { opacity: 0; transform: scale(0.6); }
+    50% { opacity: 0.9; transform: scale(1.4); box-shadow: 0 0 10px #FFFFFF; }
+    100% { opacity: 0; transform: scale(0.6); }
+}
+
+/* Asegurar que todas las secciones queden estables sobre las estrellas */
+.hero-content, .music-section, .contador-section, .messages-section, .gallery-section {
+    position: relative;
+    z-index: 5;
+}
+
+section {
+    background: linear-gradient(to bottom, rgba(11,11,11,0) 0%, rgba(26,26,26,0.4) 100%);
+}
