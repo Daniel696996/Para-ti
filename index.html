@@ -77,10 +77,25 @@
 
     <section class="messages-section">
         <h2>Déjame una nota secreta</h2>
-        <form action="guardar.php" method="POST" class="message-form">
-            <textarea name="mensaje" placeholder="Escribe algo lindo aquí..." required></textarea>
-            <button type="submit">Enviar al corazón 💌</button>
-        </form>
+        <!-- Sección Notas Secretas -->
+<section class="messages-section">
+    <h2>Déjame una nota secreta</h2>
+    
+    <!-- Formulario conectado a Web3Forms -->
+    <form action="https://api.web3forms.com/submit" method="POST" class="message-form">
+        
+        <!-- Tu clave mágica pública -->
+        <input type="hidden" name="access_key" value="0b42e964-8d9c-4a16-9b2f-288178003479">
+        
+        <!-- Nombre del campo de texto (debe llamarse 'message' para Web3Forms) -->
+        <textarea name="message" placeholder="Escribe aquí tu frase favorita o un mensajito lindo... 💜" required></textarea>
+        
+        <!-- Esto hace que después de enviar, la regrese automáticamente a tu página -->
+        <input type="hidden" name="redirect" value="https://daniel696996.github.io/Para-ti/">
+
+        <button type="submit">Enviar al corazón 💌</button>
+    </form>
+</section>
     </section>
 
     <script src="script.js"></script>
